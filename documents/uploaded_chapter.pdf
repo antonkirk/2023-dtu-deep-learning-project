@@ -1,0 +1,214 @@
+02456 Deep learning 2023 - course plan and information
+
+Time: Mondays at 13:00-17:00 (first session is August 28th, 2023)
+Locations: We will use the following rooms - building/room - (Campus map):
+B303A-A042
+B303A-046
+B303A-047
+B303A-048
+B303A-HOEST
+Zoom (You need to sign-in with you DTU account)
+We use flipped classroom teaching. During the weeks with labs, the teachers and teaching assistants will circulate between the rooms so there will be opportunity to meet all. Any short lectures/instructions will be repeated in all rooms. You are free to choose whatever room you prefer of course respecting the limits on room capacity. During the weeks with project work each room will cover specific topics.
+If you are not able to be on campus or prefer to work remotely you will be able to participate through Zoom. One teaching assistant will be dedicated to the Zoom channel: Zoom.
+We also use Slack for communication: We will make dedicated channels for labs and projects. Here is a Slack invite link. (In Slack you can add channels from the list of channels by clicking the “+” next to Channels in the left panel and click “Browse channels” to choose.)
+Bring a laptop.
+The first eight weeks of the course will be dedicated to lab work. There will be a brief introduction to the course at the first session and a number of dedicated meetings online or in person with project supervisors.
+Teachers
+Ole Winther
+Jes Frellsen
+Teaching assistants
+Aleksander Nagaj
+Anders Christensen
+Anna Maria Clara Schibelle
+Anshuk Uppal
+Beatrix Miranda Ginn Nielsen
+Bo Li
+Kenny Olsen
+Marco Miani
+Nina Weng
+Paul Jeha
+Pawel Tomasz Pieta
+Raul Ortega Ochoa
+Teresa Karen Scheidt
+Thea Brüsch
+Google CoLab
+
+Google CoLab is a free cloud based Jupyter notebook platform with collaboration functionality. It even has GPUs and you don't need any credits, just log in with your Google account. To start, import a notebook using a github link or upload it from your pc: https://colab.research.google.com/. Setting up is quite straightforward. If you need to install libraries you can add that in a code cell with `! pip install <library name>`. You can upload some extra files (such as additional py scripts) that your jupyter notebook will use.
+Other free GPU compute resources
+
+It might be that Google CoLab will start putting restrictions if you use it too much. But there are alternatives:
+DTU HPC
+
+Nicklas Hansen has made this guide.
+Google cloud platform (GCP)
+
+You can also sign up to Google cloud (GCP) and get free credits there. Here are instructions on how to set up GPU computation on Google cloud. Follow the instructions until Optional.
+Topics in the first eight weeks
+
+Introduction to statistical machine learning, feed-forward neural networks (FFNN) and error back-propagation. Part I do it yourself on pen and paper.
+Introduction to statistical machine learning, feed-forward neural networks (FFNN) and error back-propagation. Part II do it yourself in Python.
+Introduction to statistical machine learning, feed-forward neural networks (FFNN) and error back-propagation. Part III PyTorch.
+Convolutional neural networks (CNN)
+Transformers and recurrent neural networks (RNN)
+Tricks of the trade and data science with PyTorch
+Variational learning and generative adversarial networks for unsupervised and semi-supervised learning + deadline for selection of student projects on Friday, Oct 13th 2023 at 23.59.
+Reinforcement learning - policy gradient and deep Q-learning + start of student projects.
+Week 9-13 will be only project work
+
+In the seven project weeks we will still meet on Mondays for project work and supervision.
+Evaluation and peer grading during the course
+
+​​Evaluation:
+The course is graded using the 7-step scale.
+The final grade is based solely on the evaluation of the final project, which starts in the 7th week of the course. The project group should consist of 3-4 students. In special circumstances we can also accept groups of 1 or 2 students. (In the course catalogue it says 1-3 students. We will correct that for next year but cannot change it now.)
+The evaluation of the final project is based on two parts, both of which are done in groups but evaluated individually:
+a poster exam presentation, where the project groups document the results of their project in a poster and present to two or more teachers acting as examiners and
+a report in which the project groups document their solution. The report should be a maximum of 6 pages plus references using this conference paper format.
+More details are given below.
+The student gains access to the final project by passing 6 out of 8 lab sessions that precede it.
+A lab session is passed by:
+grading the reports from lab sessions of 3 other students on Peergrade and
+passing the lab as judged by the teacher. More details given below.
+More details on peer grading: The 8 lab sessions are evaluated using peer grading. We use peer grading to ensure more accurate evaluation and better feedback. Graders get 3 reports at each deadline and have one week to carry out the feedback. If you forget to perform your peer grading it is not nice to your fellow students, but you can still pass that lab for which you forgot to grade.  
+Handing in and peer grading six of the eight labs reports is required for being able to execute the project and eventually pass the course. If a hand-in is not passed you will be contacted with the option of re-submitting the lab directly to the teacher so if you hear nothing assume that you have passed the lab. You can also contact the teacher directly on Slack if something went wrong with the submission of the lab. Peergrade deadlines are strict so no need to write about getting an extension.
+The following reports should be handed in jupyter notebook format. The weeks refer to weeks in term, and the fall break week is not counted.
+Week 1 computer exercise. Deadline: Monday week 2.
+Week 2 computer exercise. Deadline: Monday week 3.
+Week 3 computer exercise and 1 exercise of your own choice from course material week 1. Deadline: Monday week 4
+Week 4 computer exercise  and 1 exercise of your own choice from course material week 1-2. Deadline: Monday week 5.
+Week 5 computer exercise. Deadline: Monday week 6.
+Week 6 computer exercise. Deadline: Monday week 7.
+Week 7 computer exercise  and 1 exercise of your own choice from course material week 1-3. Deadline: Monday week 8
+Week 8 computer exercise  and 1 exercise of your own choice from course material week 1-3. Deadline: Monday week 9.
+Project selection. Deadline Friday, Oct 20th 2023 at 23.59.
+Link to 2023 project selection sheet
+Project synopsis. Deadline: Monday week 9 at 23:59. The synopsis should be approximately half a page and maximum one page with a project title, motivation, background, milestones and references. It is important that the plan is realistic. The main purposes of the synopsis are to make sure the project size is well-calibrated and is concrete enough to start working from day one. The synopsis will not be used in the evaluation. The synopsis should be sent to your project supervisor.
+Project poster session. PhD students taking the course as part of their PhD will not have to make a poster and take part of the poster session. In mixed groups of PhD and non-PhD students, only the non-PhD students have to take part in the poster session. The exam date is December 7th from 9 to 17. We divide the day into half hour slots and your group will later be given the possibility to register for a slot. A link to sign up for the poster session will appear here in due time. So having another exam on the same day should not be a problem. We will also organise an extra exam date for those of you who cannot make it on the date. It will be group poster presentations. We will invite outside guests and we will walk around and ask questions to all groups. We will make a schedule for when the teachers visit your poster. Plan for a 2 minute presentation per group member and 1-2 minutes for questions. The remainder of the time you can either present your poster to other students and guests or go visit other posters. Remember that it is important for the overall impression that you divide the presentation and answering of the questions more or less equally between you. The poster should be in A1 format. Remember to put both your names and student numbers under title. Here and here are links to examples using the latex template and here is one in powerpoint. You do not have to use that. The DTU library offers poster printing for a not too high price.
+Final report deadline December 21st at 23:59. [Note this was earlier set to a later date but according to DTU rules, the latest allowed deadline is December 21st.] The report should be a maximum 6 pages plus references using this conference paper format. The report should also contain a link to your project code Github repository. Among the files in the repository should be a jupyter notebook that ideally should recreate the main results of your report. If some of your data is confidential then use some shareable data instead. For MSc students, please also include your poster in the submission.  
+Detailed content
+
+Links to individual video lectures and lecture slides are given below. Here is a link to all 2016 video lectures as a playlist and a Google doc folder with all the lecture slides. More videos have been added over the years. They are all linked below. A very good alternative video resource is Hugo Larochelle’s YouTube playlist.
+Week 1 - Feed-forward neural networks - do it yourself pen and paper
+
+During this week and the following two weeks watch video lectures:
+Part 0 Overview
+Part 1 Deep learning
+Part 2.1 Feed-forward neural networks
+Part 2.2 Feed-forward neural networks
+Part 3 Error Backpropagation
+Part 4 Optimization
+and take notes for at least 3 questions to ask. Link to lecture slides is here.
+During this week and the following two weeks read Michael Nielsen, Neural networks and deep learning http://neuralnetworksanddeeplearning.com/ Chapters 1-3 (stop when reaching the section called Overfitting and regularization) and browse Chapter 4. Note that this is reading material for the first three weeks of the course. Also, in total six exercises of your own choice will be homework later in the course.
+Alternative textbooks: All topics are also covered in the deep learning book that may be read as a supplement. The book can also be bought from the DTU bookstore. You will get 10% discount with this link. Feed-forward neural networks are covered in this chapter. Chapter 1 gives an introduction to deep learning and Part II gives the necessary background on linear algebra, probability, numerical computation and machine learning. Alternative textbook 2: Chris Bishop, Pattern recognition and machine learning. If you need to up your game in mathematics, the book Mathematics for machine learning is an excellent resource and the note Mathematics for Machine Learning offers a concise and compressed collection of the mathematical concepts used in deep learning. These resources are freely available online and are very valuable sources of information.
+Install software on your laptop or go directly to Google CoLab (see above). Installation guide for laptop and cloud may be found here.
+Carry out computer exercises week 1. It is encouraged to work together with other students. Type in everything yourself. Code answers are fine not to differ much within the group and text answers should be in your own words. Note that the computer exercises may experience minor change up to 3 days before the actual session. The hand-in is the notebook with your modifications. It is only allowed to hand in .ipynb files. Each week you should only hand in one file. It is the file with EXE in its name. You hand in on peergrade.io. In order to be able to hand in on peergrade you can use this invitation link https://app.peergrade.io/join/JFFJBF or login into peergrade and use the invitation code JFFJBF. There you will receive information on handing in exercises and deadlines for activities. Some students have previously by accident signed up twice with different emails or forgotten the “student” in their DTU student mail address. If you then submit and check with different email addresses it will look as though you have not handed in.
+Peergrade exercise from three other students through peergrade.io.
+Week 2 - Feed-forward neural networks - do it yourself in NumPy
+
+See 1. and 2. from Week 1.
+Carry out computer exercises week 2.
+Peergrade exercise from three other students through peergrade.io.
+Week 3 - Feed-forward neural networks in PyTorch
+
+See 1. and 2. from Week 1.
+Carry out computer exercises week 3.
+Peergrade exercise from three other students through peergrade.io.
+Hand in the notebook marked with EXE on peergrade.io. It should contain your added code in the exercises and the answer of one exercise from Michael Nielsen's book (see point 3. above). The answer to the book exercise should be in a markdown cell at the bottom of the notebook.
+Peergrade exercise from three other students through peergrade.io.  
+Week 4 - Convolutional neural networks
+
+Watch week 2 video lectures  
+Part 1 Introduction to CNNs (PART 1/2)
+Part 1 Introduction to CNNs (PART 2/2)
+Part 2 CNNs the details (PART 1/2)
+Part 2 CNNs the details (PART 2/2)
+2017 CNN update
+2017 Activation functions update
+2017 Image segmentation
+and take notes for at least 3 questions to ask. Link to lecture slides is here and here for 2017 updates.
+Reading material Michael Nielsen, Neural networks and deep learning http://neuralnetworksanddeeplearning.com/ Chapter 6 (stop when reaching section called Other approaches to deep neural nets).
+Alternative textbook chapter in the deep learning book.
+One exercise from the book chapters.
+Carry out computer exercises week 4.
+Hand in the notebook marked with EXE on peergrade.io.
+Peergrade exercise from three other students through peergrade.io. You will receive instructions about this from peergrade.io.
+Week 5 - Transformers and recurrent neural networks
+
+Watch week 3 video lectures
+02456week3 1 RNN (PART 1 of 3)
+02456week3 1 RNN (PART 2 of 3)
+02456week3 1 RNN (PART 3 of 3)
+02456week3.2_RNN_training (PART 1 of 3)
+02456week3.2_RNN_training (PART 2 of 3)
+02456week3 2 RNN training (PART 3 of 3)
+02456week3 3 Attention (PART 1 of 2)
+02456week3 3 Attention (PART 2 of 2)
+02456week3 4 Supervised learning recap
+2017 Quasi RNN
+2017 Non-recurrent sequence to sequence models
+2017 Text summarization
+2020 Transformers (PART 1 of 2)
+2020 Transformers (PART 2 of 2)
+2020 Language modelling - GPT-2 and 3
+2020 BERT
+and take notes for at least 3 questions to ask. Link to: 2016 lectures, 2017 lecture updates and 2020 lecture updates.
+Reading material Alex Graves book, Supervised Sequence Labelling with Recurrent Neural Networks Chapters 3.1, 3.2 and 4. Browse Michael Nielsen, Neural networks and deep learning Chapter 6 section Other approaches to deep neural nets) and onwards. A good introduction to Transformers is The Illustrated Transformer. New tutorial on Transformers https://aman.ai/primers/ai/transformers/#one-hot-encoding
+Alternative textbook chapter in the deep learning book. Andrej Karpathy has a nice blogpost that gives a good flavour of the whats and hows of RNNs.
+Carry out computer exercises week 5
+Hand in and peergrade on peergrade.io like in previous week.
+Week 6 - Tricks of the trade and data science challenge
+
+Watch week 4 video lectures
+02456week4 1 1 Initialization and gradient clipping 
+02456week4 1 2 batch normalization
+02456week4 2 1 regularization
+02456week4 2 2 regularization methods
+02456week4 2 3 data augmentation
+02456week4 2 4 ensemble methods and dropout
+02456week4 3 recap
+2017 37 reasons your nn working (part 1 of 2) Walk through of the 37 reasons why your neural network is not working blog post.
+2017 37 reasons you not working (part 2 of 2)
+2020 Recipe to training neural networks - become one with data (part 1 of 3).
+2020 Recipe to training neural networks - baselines (part 2 of 3).
+2020 Recipe to training neural networks - overfit, tune and tune some more (part 3 of 3).
+and take notes for at least 3 questions to ask. Link to lecture slides 2016 lecture slides, 2017 blog post and 2020 lecture slides.  
+Reading material Michael Nielsen, Neural networks and deep learning http://neuralnetworksanddeeplearning.com/ Chapter 3 from section Overfitting and regularization and Chapter 5.
+Alternative textbook chapters on regularization, optimization, deep learning practice and applications from the deep learning book.  
+Additional material: Andrei Karpathy blogpost on how to approach a data science problem with deep learning, blogpost on things that can go wrong in neural network training and interactive initialization demo.
+Computer exercises week 6 using PyTorch on the Kaggle competition leaf classification. Hand in and peergrade on peergrade.io like in previous weeks.
+Week 7 - Un- and semi-supervised learning
+
+Watch week 5 video lectures
+02456week5 1 1 unsupervised learning
+02456week5 1 2 unsupervised learning latent variables
+02456week5 2 1 autoencoders
+02456week5 2 2 autoencoders layerwise pretraining
+02456week5 3 1 variational autoencoders
+02456week5 3 2 semi-supervised variational autoencoders 
+2017 Generative adversarial networks
+2020 Flows
+2020 Self-supervised learning
+2020 Self-training/noisy student
+2020 Distribution Augmentation
+2020 Flat minima
+and take notes for at least 3 questions to ask. Link to lecture slides 2016 slides and 2017 slides and 2020 slides.
+Reading material DL Chapter 14 and 20.10.3. (Further learning a course dedicated to generative modelling.)
+One exercise from the book chapters.
+Carry out computer exercises week 7 on autoencoder un- and semi-supervised. Hand in and peergrade on peergrade.io like in previous weeks.
+Project selection deadline is this week (see above).
+Week 8 - Reinforcement learning 
+
+Watch week 6 video lectures
+02456week6 1 1 reinforcement learning
+02456week6 1 2 reinforcement learning approaches
+02456week6 2 1 AlphaGo policy and value networks
+02456week6 2 2 AlphaGo steps 1 to 4
+02456week6 3 policy gradients
+02456week6 4 a few last words
+2017 Deep Q learning
+2017 Evolutionary strategies
+and take notes for at least 3 questions to ask. Link to lectures here and here for 2017 update.
+Reading: another nice blog post by Andrei Karpathy. Optional reading material on the connection between variational and reinforcement learning.
+One exercise from the book chapters. 
+Computer exercises on reinforcement learning methods (policy gradient, deep Q learning, evolutionary strategies) in the openAI Gym. Carry out exercises week 8. Hand in and peergrade on peergrade.io like in previous weeks.
+Project work.
