@@ -3,8 +3,6 @@
 ## Description
 Group project in Fall course "Deep Learning" at DTU. Consists of a simple Streamlit front-end for Langchain RAG for a teaching-learning system. 
 
-*Note*: The commit history of this repository contains private API keys used for testing of the project. These will be deactivated soon, but please do not share the repository.
-
 ## Installing required packages
 In the project folder, create a new virtual environment and activate it:
 ```
