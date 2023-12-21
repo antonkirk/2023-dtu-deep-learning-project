@@ -3,9 +3,7 @@ from langchain.prompts import PromptTemplate
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
-from langchain.memory import ConversationBufferMemory
 import streamlit as st
 
 FILE_PATH = "documents/neural_networks_and_deep_learning.pdf"
@@ -83,7 +81,6 @@ if not "is_questions_generated" in st.session_state:
 
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-    st.write("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")
 
 st.title("💬 Q&A Chatbot")
 st.caption("Generate comprehension questions for your textbook using GPT-3.5 Turbo.")

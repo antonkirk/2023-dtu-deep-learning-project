@@ -6,23 +6,54 @@ from langchain.embeddings import OpenAIEmbeddings, HuggingFaceEmbeddings
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 from langchain.vectorstores import Chroma
-from huggingface_hub import login
+from pypdf import PdfWriter
 import streamlit as st
 
+def parse_txt(file, file_name):
+    doc = file.read().decode()
+    file_path = f'documents/{file_name}'
 
+    with open(file_path, 'w') as f:
+        f.write(doc)
+
+    loader = TextLoader(file_path)
+    return loader
+
+def parse_pdf(file, file_name):
+    pdf_writer = PdfWriter()
+
+    pdf_writer.append(file)
+
+    file_path = f'documents/{file_name}'
+
+    with open(file_path, 'wb') as out:
+        pdf_writer.write(out)
+
+    loader = PyPDFLoader(file_path)
+
+    return loader
+
+def embed_document(loader):
+    text_splitter = RecursiveCharacterTextSplitter(separators= ["\n\n", "\n", "\t"], chunk_size=1500, chunk_overlap=500)
+    splits = text_splitter.split_documents(loader.load())
+
+    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+
+    vectorstore = Chroma.from_documents(documents=splits, embedding=embeddings)
+
+    return vectorstore
+    
 st.set_page_config(
         page_title="BookChat",
 )
 
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-    st.write("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")
 
 st.title("📖 BookChat")
 st.caption("Ask your textbook questions using GPT-3.5 Turbo.")
 
-
-uploaded_file = st.file_uploader("Upload a chapter from your textbook, or a course description", type=("txt"))
+uploaded_file = st.file_uploader("Upload a chapter from your textbook, or a course description", type=("txt","pdf"))
 
 question = st.text_input(
     "Ask something about the document",
@@ -35,32 +66,15 @@ if uploaded_file and question and not openai_api_key:
 
 if uploaded_file and question and openai_api_key:
     document_name = uploaded_file.name
-    chapter = uploaded_file.read().decode()
-    with open(f'documents/{document_name}', 'w') as f:
-        f.write(chapter)
+    document_type = uploaded_file.type
+    if document_type == 'text/plain':
+        text = parse_txt(uploaded_file, document_name)
+    elif document_type == 'application/pdf':
+        text = parse_pdf(uploaded_file, document_name)
+    else:
+        st.error('Unsupported file type')
 
-    loader = TextLoader(f'documents/{document_name}')
-
-    text_splitter = RecursiveCharacterTextSplitter(separators= ["\n\n", "\n", "\t"], chunk_size=1500, chunk_overlap=500)
-    splits = text_splitter.split_documents(loader.load())
-
-    #for split in splits:
-    #    print(f"Split: {split}")
-
-    #login('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')
-
-    # model_name = "dtu-deep-learning-course-f2023/msmarco-rag-finetune"
-    # model_kwargs = {'device': 'cpu'}
-    # encode_kwargs = {'normalize_embeddings': False}
-    # embeddings = HuggingFaceEmbeddings(
-    #     model_name=model_name,
-    #     model_kwargs=model_kwargs,
-    #     encode_kwargs=encode_kwargs
-    # )
-
-    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-
-    vectorstore = Chroma.from_documents(documents=splits, embedding=embeddings)
+    vectorstore = embed_document(text)
     retriever = vectorstore.as_retriever()
 
     TEMPLATE = """ \
@@ -78,8 +92,8 @@ if uploaded_file and question and openai_api_key:
 
     docs = vectorstore.similarity_search(question)
 
-    for doc in docs:
-        print(doc)
+    # for doc in docs:
+    #     print(doc)
 
     st.write(rag_chain.invoke(question))
     
